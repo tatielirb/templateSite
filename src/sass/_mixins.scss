@@ -1,0 +1,53 @@
+@mixin breakpoint($size) {
+  @if ($size == 'mobile-up') { // @include breakpoint('mobile-up') { }
+    @media screen and (min-width: $mobile) {
+      @content;
+    }
+  }
+
+  @else if ($size == 'mobile-big-up') { // @include breakpoint('mobile-big-up') { }
+    @media screen and (min-width: $mobile-big) {
+      @content;
+    }
+  }
+
+  @else if ($size == 'tablet-up') { // @include breakpoint('tablet-up') { }
+    @media screen and (min-width: $tablet) {
+      @content;
+    }
+  }
+
+
+  @else if ($size == 'desktop-up') { // @include breakpoint('desktop-up') { }
+    @media screen and (min-width: $desktop) {
+      @content;
+    }
+  }
+
+  @else if ($size == 'desktop-big-up') { // @include breakpoint('desktop-big-up') { }
+    @media screen and (min-width: $desktop-big-up) {
+      @content;
+    }
+  }
+
+}
+
+// @mixin ff-regular {
+//   font-family: "";
+//   font-weight: 400;
+// }
+//
+// @mixin ff-semibold {
+//   font-family: "";
+//   font-weight: 600;
+// }
+//
+// @mixin ff-medium {
+//   font-family: "";
+//   font-weight: 500;
+// }
+//
+// @mixin ff-black {
+//   font-family: "";
+//   font-weight: 900;
+// }
